@@ -18,10 +18,10 @@ class Project extends Command
 
     protected function configure()
     {
-        $this->setName('new')
+        $this->setName('new:project')
             ->setDescription('Set up a new development environment.')
             ->addArgument('name', InputArgument::REQUIRED, "Project or application name")
-            ->addOption('sub', null, InputOption::VALUE_OPTIONAL, 'Name of bootstrap location', '');
+            ->addOption('sub', null, InputOption::VALUE_REQUIRED, 'Name of bootstrap location');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
